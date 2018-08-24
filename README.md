@@ -16,8 +16,12 @@ Docker Usage
 ------------
 * Download the Dockerfile from this git. And place it inside a directory say /my-docker/. Execute below command by opening a terminal at the directory /my-docker/ for creating image from the Dockerfile.
 * `sudo docker build -t my-nginx-image .` . If this command is successful you can find your image by typing the below command.
-* `sudo docker images` . Now run a container using this image by using below command.
+* `sudo docker images` . 
+![image](https://user-images.githubusercontent.com/17001948/44576654-be141200-a7ac-11e8-8fe9-7f330094a94c.png)
+Now run a container using the image `my-nginx-image` by using below command.
 * `sudo docker run --rm --name my-nginx-container -d -p 81:80 my-nginx-image`. Check your container is running by below command
-* `sudo docker ps` . It will show `my-nginx-container`
-*  Our ubuntu machine has a port 81 and it is assigned to the 80 port of the my-nginx-container. So if we send request to 81 port we can see the response from the container my-nginx-image.
-* 
+* `sudo docker ps` . It will show `my-nginx-container` .
+![image](https://user-images.githubusercontent.com/17001948/44576619-a177da00-a7ac-11e8-8efb-b382eb946045.png)
+*  Our ubuntu machine has a port 81 and it is assigned to the 80 port of the my-nginx-container and if we send request to 81 port we can see the response from the container my-nginx-image.
+* use the `curl` command to get the response. `curl http://localhost:81`
+![image](https://user-images.githubusercontent.com/17001948/44576486-4cd45f00-a7ac-11e8-95b0-952687d065cd.png)
