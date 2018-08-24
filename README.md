@@ -19,9 +19,13 @@ Docker Usage
 * `sudo docker images` . 
 ![image](https://user-images.githubusercontent.com/17001948/44576654-be141200-a7ac-11e8-8fe9-7f330094a94c.png)
 Now run a container using the image `my-nginx-image` by using below command.
-* `sudo docker run --rm --name my-nginx-container -d -p 81:80 my-nginx-image`. Check your container is running by below command
+* `sudo docker run --rm --name my-nginx-container -d -p 81:80 my-nginx-image`. We are using --rm flag to ensure that once I stop the container, it will delete the container also. Check your container is running by below command
 * `sudo docker ps` . It will show `my-nginx-container` .
 ![image](https://user-images.githubusercontent.com/17001948/44576619-a177da00-a7ac-11e8-8efb-b382eb946045.png)
 *  Our ubuntu machine has a port 81 and it is assigned to the 80 port of the my-nginx-container and if we send request to 81 port we can see the response from the container my-nginx-image.
 * use the `curl` command to get the response. `curl http://localhost:81`
 ![image](https://user-images.githubusercontent.com/17001948/44576486-4cd45f00-a7ac-11e8-95b0-952687d065cd.png)
+* stop the container . `sudo docker stop my-nginx-container` .
+* see if the container has been stopped or not. `sudo docker ps` .
+* check of the container has been deleted or not after stop.`sudo docker ps -a` .
+![image](https://user-images.githubusercontent.com/17001948/44577058-b99c2900-a7ad-11e8-9206-790252b83337.png)
