@@ -17,7 +17,7 @@ Docker Usage
 * Clone this repo. Get inside the directory which is created after cloning into the repo and open a terminal.
 * Type command `ls` . You must see the Dockerfile as shown below.
 ![image](https://user-images.githubusercontent.com/17001948/44577235-2c0d0900-a7ae-11e8-985d-bf8b7a8d0281.png)
-* Execute below command by opening a terminal at the directory /my-docker/ for creating image from the Dockerfile.
+* Execute below command in terminal for creating image from the Dockerfile.
 * `sudo docker build -t my-nginx-image .` . If this command is successful you can find your image by typing the below command.
 * `sudo docker images` . 
 ![image](https://user-images.githubusercontent.com/17001948/44576654-be141200-a7ac-11e8-8fe9-7f330094a94c.png)
